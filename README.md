@@ -1,8 +1,7 @@
 # Focus Highlight
 
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-
-![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE.md)
 
 Focus Highlight replaces your native focus outline with an animated one. This can be useful if you can't rely on the native focus outline or if you just want to have a nice animation.
 
