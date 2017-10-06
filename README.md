@@ -25,7 +25,7 @@ Initialize Focus Highlight after you finish loading the page:
 FocusHighlight.init()
 ```
 
-Focus Highlight comes with with default settings which can be changed:
+Focus Highlight comes with default settings which can be changed:
 ```javascript
 FocusHighlight.init({
   borderRadius: 4,
