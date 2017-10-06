@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>focus-highlight</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+<form method="get" action="/">
+    <p>
+        <label>Name
+            <input type="text" name="name" required>
+        </label>
+    </p>
+
+    <p>
+        <label>Phone
+            <input type="tel" name="tel">
+        </label>
+    </p>
+
+    <p>
+        <label>Email
+            <input type="email" name="email">
+        </label>
+    </p>
+
+    <p>
+        <label>Pizza
+            <select id="pickup_place" name="pickup_place">
+                <option value="" selected="selected">Select One</option>
+                <option value="margeritha">Margeritha</option>
+                <option value="peperoni">Peperoni</option>
+                <option value="hawai">Hawai</option>
+            </select>
+        </label>
+    </p>
+
+    <fieldset>
+        <legend>Extras</legend>
+        <p><label> <input type="checkbox" name="extra" required value="car"> Extra Cheese</label></p>
+        <p><label> <input type="checkbox" name="extra" required value="van"> Extra Spice</label></p>
+        <p><label> <input type="checkbox" name="taxi" required value="tuktuk"> Extra Peperoni</label></p>
+    </fieldset>
+
+    <fieldset>
+        <legend>Newsletter?</legend>
+        <p><label> <input type="radio" name="newsletter" value="yes"> Yes </label></p>
+        <p><label> <input type="radio" name="newsletter" value="no"> No </label></p>
+    </fieldset>
+
+    <p>
+        <label>Delivery Date/Time
+            <input type="datetime-local" name="pickup_time" required>
+        </label>
+    </p>
+
+    <p>
+        <label>Special Instructions
+            <textarea name="comments" maxlength="500"></textarea>
+        </label>
+    </p>
+
+    <p>
+        <input type="submit">
+    </p>
+
+</form>
+
+<script src="dist/bundle.js"></script>
+
+</body>
+</html>

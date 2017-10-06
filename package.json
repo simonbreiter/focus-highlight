@@ -1,0 +1,32 @@
+{
+  "name": "focus-highlight",
+  "version": "0.0.1",
+  "description": "Animated focus highlight",
+  "main": "src/FocusHighlight.js",
+  "scripts": {
+    "dev": "webpack --watch",
+    "js:fix": "standard --fix",
+    "test": "standard"
+  },
+  "keywords": [
+    "animated",
+    "focus",
+    "highlight"
+  ],
+  "author": "Simon Breiter <hello@simonbreiter.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/simonbreiter/focus-highlight"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint-config-standard": "^10.2.1",
+    "eslint-config-standard-jsx": "^4.0.2",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^7.4.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "standard": "^10.0.3",
+    "webpack": "^3.6.0"
+  }
+}
