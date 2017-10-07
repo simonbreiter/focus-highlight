@@ -17,7 +17,7 @@ npm install focus-highlight
 
 Import Focus Highlight with the JS-Bundler of your choice:
 ```javascript
-import FocusHighlight from 'FocusHighlight'
+import FocusHighlight from 'focus-highlight'
 ```
 
 Initialize Focus Highlight after you finish loading the page:
