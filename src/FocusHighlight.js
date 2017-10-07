@@ -33,13 +33,17 @@ export default {
   appendDefaultStyle () {
     const css = `
       .focus {
-        transition-property: width, height, left, top, opacity, border-radius;
         border-radius: ${this.settings.borderRadius}px;
         border: ${this.settings.borderThickness}px solid ${this.settings.color};
         box-shadow: 0 0 5px 1px ${this.settings.color};
         box-sizing: border-box;
-        transition-duration: ${this.settings.transitionDuration}s;
         transition-timing-function: ${this.settings.transitionTimingFunction};
+        transition: width ${this.settings.transitionDuration}s, 
+                    height ${this.settings.transitionDuration}s, 
+                    left ${this.settings.transitionDuration}s, 
+                    top ${this.settings.transitionDuration}s, 
+                    opacity ${this.settings.transitionDuration}s, 
+                    border-radius .2s;
       }
     `
     const head = document.head || document.getElementsByTagName('head')[0]
