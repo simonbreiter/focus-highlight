@@ -1,6 +1,6 @@
 {
   "name": "focus-highlight",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Animated focus highlight",
   "main": "src/FocusHighlight.js",
   "scripts": {
