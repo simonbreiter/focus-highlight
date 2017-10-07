@@ -17,7 +17,7 @@ npm install focus-highlight
 
 Import Focus Highlight with the JS-Bundler of your choice:
 ```javascript
-import FocusHighlight from 'FocusHighlight'
+import FocusHighlight from 'focus-highlight'
 ```
 
 Initialize Focus Highlight after you finish loading the page:
@@ -25,7 +25,7 @@ Initialize Focus Highlight after you finish loading the page:
 FocusHighlight.init()
 ```
 
-Focus Highlight comes with with default settings which can be changed:
+Focus Highlight comes with default settings which can be changed:
 ```javascript
 FocusHighlight.init({
   borderRadius: 4,
@@ -45,7 +45,7 @@ Firefox comes with its own custom outline, `outline: none;` is not enough unfort
 
 ## Alternatives
 
-[Flying Focus](https://github.com/NV/flying-focus) offers a similiar solution and even comes with a browser extension, if this is what you looking for.
+[Flying Focus](https://github.com/NV/flying-focus) offers a similiar solution and even comes with a browser extension, if that is what you looking for.
 
 ## License
 
