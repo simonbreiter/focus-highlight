@@ -45,7 +45,7 @@ Firefox comes with its own custom outline, `outline: none;` is not enough unfort
 
 ## Alternatives
 
-[Flying Focus](https://github.com/NV/flying-focus) offers a similiar solution and even comes with a browser extension, if this is what you looking for.
+[Flying Focus](https://github.com/NV/flying-focus) offers a similiar solution and even comes with a browser extension, if that is what you looking for.
 
 ## License
 
