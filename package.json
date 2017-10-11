@@ -18,6 +18,10 @@
     "type": "git",
     "url": "https://gitlab.com/simonbreiter/focus-highlight"
   },
+  "bugs": {
+    "url": "https://gitlab.com/simonbreiter/focus-highlight/issues"
+  },
+  "homepage": "https://gitlab.com/simonbreiter/focus-highlight",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
