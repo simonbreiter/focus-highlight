@@ -36,7 +36,7 @@ FocusHighlight.init({
   color: "blueViolet",
   transitionDuration: 0.3,
   transitionTimingFunction: 'ease-in-out',
-  customStyle: false // Set to false if you want to roll with your own CSS
+  customStyle: false // Set to true if you want to roll with your own CSS
 })
 ```
 
