@@ -25,6 +25,8 @@ Initialize Focus Highlight after you finish loading the page:
 FocusHighlight.init()
 ```
 
+## Customization
+
 Focus Highlight comes with default settings which can be changed:
 ```javascript
 FocusHighlight.init({
@@ -34,10 +36,11 @@ FocusHighlight.init({
   color: "blueViolet",
   transitionDuration: 0.3,
   transitionTimingFunction: 'ease-in-out',
-  customStyle: false
+  customStyle: false // Set to false if you want to roll with your own CSS
 })
 ```
-Set `customStyle: true` if you completely want to roll with your own CSS.
+
+If your using custom forms and aren't happy with the default focus, you can add a custom wrapper-element with the `data-focus-highlight="wrapper"` attribute and focus-highlight will focus that instead.
 
 ## Known Limitations
 
