@@ -7,6 +7,10 @@
         body {
             font-family: sans-serif;
         }
+
+        .wrapper {
+            display: inline-block;
+        }
     </style>
 </head>
 <body>
@@ -24,11 +28,13 @@
         </label>
     </p>
 
-    <p>
-        <label>Email
-            <input type="email" name="email">
-        </label>
-    </p>
+    <div class="wrapper" data-focus-highlight="wrapper">
+        <p>
+            <label>Email
+                <input type="email" name="email">
+            </label>
+        </p>
+    </div>
 
     <p>
         <label>Pizza

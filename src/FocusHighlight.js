@@ -1,3 +1,14 @@
+const closest = (el, root, attr) => {
+  const parent = el.parentNode
+  if (parent.dataset.focusHighlight !== 'wrapper' && parent !== document.body) {
+    return closest(parent, root, attr)
+  } else if (parent === document.body) {
+    return root
+  } else {
+    return parent
+  }
+}
+
 export default {
   settings: {
     padding: 2,
@@ -82,15 +93,16 @@ export default {
     )
   },
   move (e) {
-    const rect = e.target.getBoundingClientRect()
+    const target = closest(e.target, e.target, 'wrapper')
+    const rect = target.getBoundingClientRect()
 
-    if (e.target.type === 'radio') {
+    if (target.type === 'radio') {
       this.focus.style.borderRadius = '50%'
     } else {
       this.focus.style.borderRadius = `${this.settings.borderRadius}px`
     }
 
-    e.target.style.outline = 'none'
+    target.style.outline = 'none'
     this.focus.style.width = `${rect.width + this.settings.padding}px`
     this.focus.style.height = `${rect.height + this.settings.padding}px`
     this.focus.style.left = `${rect.left - this.settings.padding / 2}px`
