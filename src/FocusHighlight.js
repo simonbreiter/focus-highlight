@@ -48,6 +48,8 @@ export default {
         border: ${this.settings.borderThickness}px solid ${this.settings.color};
         box-shadow: 0 0 5px 1px ${this.settings.color};
         box-sizing: border-box;
+        top: 0;
+        left: 0;
         transition-timing-function: ${this.settings.transitionTimingFunction};
         transition: width ${this.settings.transitionDuration}s, 
                     height ${this.settings.transitionDuration}s, 
