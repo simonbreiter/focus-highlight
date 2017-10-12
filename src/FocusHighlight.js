@@ -9,6 +9,19 @@ const closest = (el, root, attr) => {
   }
 }
 
+const throttle = (callback, limit) => {
+  let wait = false
+  return () => {
+    if (!wait) {
+      callback.call()
+      wait = true
+      setTimeout(() => {
+        wait = false
+      }, limit)
+    }
+  }
+}
+
 export default {
   settings: {
     padding: 2,
@@ -21,6 +34,7 @@ export default {
   },
   focus: {},
   mouseDown: false,
+  visible: false,
   init (settings) {
     this.settings = Object.assign(this.settings, settings)
     this.focus = this.createFocus()
@@ -93,6 +107,7 @@ export default {
       },
       true
     )
+    window.addEventListener('resize', throttle(this.hide.bind(this), 500))
   },
   move (e) {
     const target = closest(e.target, e.target, 'wrapper')
@@ -113,9 +128,13 @@ export default {
     this.show()
   },
   hide () {
-    this.focus.style.opacity = 0
+    if (this.visible) {
+      this.visible = false
+      this.focus.style.opacity = 0
+    }
   },
   show () {
+    this.visible = true
     this.focus.style.opacity = 1
   }
 }
