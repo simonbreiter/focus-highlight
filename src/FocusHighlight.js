@@ -91,7 +91,8 @@ export default {
       this.mouseDown = true
     })
     document.documentElement.addEventListener('mouseup', e => {
-      this.mouseDown = false
+      // Mouseup event should always fire after focus event
+      setTimeout(() => { this.mouseDown = false }, 100)
     })
     document.documentElement.addEventListener(
       'focus', e => {
