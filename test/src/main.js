@@ -1,4 +1,4 @@
-import FocusHighlight from '../../src/FocusHighlight'
+import FocusHighlight from '../../lib/FocusHighlight'
 
 // FocusHighlight.init({
 //   borderRadius: 4,

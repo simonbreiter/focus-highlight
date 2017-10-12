@@ -2,7 +2,7 @@
   "name": "focus-highlight",
   "version": "0.0.6",
   "description": "Animated focus highlight",
-  "main": "src/FocusHighlight.js",
+  "main": "lib/FocusHighlight.js",
   "scripts": {
     "dev": "webpack --watch",
     "js:fix": "standard --fix",
@@ -25,12 +25,16 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-config-standard-jsx": "^4.0.2",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^7.4.0",
     "eslint-plugin-standard": "^3.0.1",
     "standard": "^10.0.3",
-    "webpack": "^3.6.0"
+    "webpack": "^3.7.1"
   }
 }
