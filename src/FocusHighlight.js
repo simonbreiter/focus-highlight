@@ -27,6 +27,7 @@ export default {
     padding: 2,
     borderRadius: 4,
     borderThickness: 2,
+    boxShadow: '0 0 5px 1px dodgerBlue',
     transitionDuration: 0.3,
     transitionTimingFunction: 'ease-in-out',
     color: 'dodgerBlue',
@@ -60,7 +61,7 @@ export default {
       .focus {
         border-radius: ${this.settings.borderRadius}px;
         border: ${this.settings.borderThickness}px solid ${this.settings.color};
-        box-shadow: 0 0 5px 1px ${this.settings.color};
+        box-shadow: ${this.settings.boxShadow};
         box-sizing: border-box;
         top: 0;
         left: 0;
