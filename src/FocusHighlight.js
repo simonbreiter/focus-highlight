@@ -113,6 +113,7 @@ export default {
   move (e) {
     const target = closest(e.target, e.target, 'wrapper')
     const rect = target.getBoundingClientRect()
+    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
 
     if (target.type === 'radio') {
       this.focus.style.borderRadius = '50%'
@@ -124,7 +125,7 @@ export default {
     this.focus.style.width = `${rect.width + this.settings.padding}px`
     this.focus.style.height = `${rect.height + this.settings.padding}px`
     this.focus.style.left = `${rect.left - this.settings.padding / 2}px`
-    this.focus.style.top = `${rect.top + document.documentElement.scrollTop - this.settings.padding / 2}px`
+    this.focus.style.top = `${rect.top + scrollTop - this.settings.padding / 2}px`
 
     this.show()
   },
