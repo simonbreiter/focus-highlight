@@ -5,6 +5,7 @@
   "main": "lib/FocusHighlight.js",
   "scripts": {
     "dev": "webpack --watch",
+    "build": "webpack",
     "js:fix": "standard --fix",
     "test": "standard"
   },
