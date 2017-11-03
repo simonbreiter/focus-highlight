@@ -97,7 +97,7 @@ export default {
     })
     document.documentElement.addEventListener(
       'focus', e => {
-        if (!this.mouseDown) {
+        if (!this.mouseDown && e.target !== document.body) {
           this.move(e)
         }
       },
