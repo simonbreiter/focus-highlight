@@ -1,5 +1,6 @@
 # Focus Highlight
 
+[![pipeline status](https://gitlab.com/simonbreiter/focus-highlight/badges/master/pipeline.svg)](https://gitlab.com/simonbreiter/focus-highlight/commits/master)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![Codacy grade](https://img.shields.io/codacy/grade/f668bdf6c65644f1b8bd63479613674b.svg)](https://www.codacy.com/app/simonbreiter/focus-highlight)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md)
