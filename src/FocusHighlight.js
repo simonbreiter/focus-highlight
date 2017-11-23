@@ -72,6 +72,7 @@ export default {
                     top ${this.settings.transitionDuration}s, 
                     opacity ${this.settings.transitionDuration}s, 
                     border-radius .2s;
+        z-index: 9999;            
       }
     `
     const head = document.head || document.getElementsByTagName('head')[0]
