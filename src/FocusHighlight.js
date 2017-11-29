@@ -31,7 +31,8 @@ export default {
     transitionDuration: 0.3,
     transitionTimingFunction: 'ease-in-out',
     color: 'dodgerBlue',
-    customStyle: false
+    customStyle: false,
+    zIndex: 9999
   },
   focus: {},
   mouseDown: false,
@@ -72,7 +73,7 @@ export default {
                     top ${this.settings.transitionDuration}s, 
                     opacity ${this.settings.transitionDuration}s, 
                     border-radius .2s;
-        z-index: 9999;            
+        z-index: ${this.settings.zIndex};            
       }
     `
     const head = document.head || document.getElementsByTagName('head')[0]
