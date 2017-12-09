@@ -27,6 +27,12 @@ Initialize Focus Highlight after you finish loading the page:
 FocusHighlight.init()
 ```
 
+Each time a element is now focused with the keyboard, focus-highlight will get activated and renders the focus. If you want to focus an element programmatically use:
+
+```javascript
+FocusHighlight.setFocus(yourElement)
+```
+
 ## Customization
 
 Focus Highlight comes with default settings which can be changed:

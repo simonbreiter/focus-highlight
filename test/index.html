@@ -23,13 +23,13 @@
 <form class="form" method="get" action="/">
     <p>
         <label>Name
-            <input type="text" name="name" required>
+            <input type="text" name="name">
         </label>
     </p>
 
     <p>
         <label>Phone
-            <input type="tel" name="tel">
+            <input id="tel" type="tel" name="tel">
         </label>
     </p>
 
@@ -54,9 +54,9 @@
 
     <fieldset>
         <legend>Extras</legend>
-        <p><label> <input type="checkbox" name="extra" required value="cheese">Extra Cheese</label></p>
-        <p><label> <input type="checkbox" name="extra" required value="spice">Extra Spice</label></p>
-        <p><label> <input type="checkbox" name="extra" required value="pepperoni">Extra Pepperoni</label></p>
+        <p><label> <input type="checkbox" name="extra" value="cheese">Extra Cheese</label></p>
+        <p><label> <input type="checkbox" name="extra" value="spice">Extra Spice</label></p>
+        <p><label> <input type="checkbox" name="extra" value="pepperoni">Extra Pepperoni</label></p>
     </fieldset>
 
     <fieldset>
@@ -67,7 +67,7 @@
 
     <p>
         <label>Delivery Date/Time
-            <input type="datetime-local" name="pickup_time" required>
+            <input type="datetime-local" name="pickup_time">
         </label>
     </p>
 
@@ -81,7 +81,10 @@
         <input type="submit">
     </p>
 
+
 </form>
+
+<button id="scriptBtn">Set focus via script</button>
 
 <script src="dist/bundle.js"></script>
 

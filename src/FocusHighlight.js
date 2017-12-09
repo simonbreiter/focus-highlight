@@ -92,10 +92,13 @@ export default {
   addListeners () {
     document.documentElement.addEventListener('mousedown', e => {
       this.mouseDown = true
+      this.hide()
     })
     document.documentElement.addEventListener('mouseup', e => {
-      // Mouseup event should always fire after focus event
-      setTimeout(() => { this.mouseDown = false }, 100)
+      this.mouseDown = false
+    })
+    document.documentElement.addEventListener('customFocus', e => {
+      this.move(e)
     })
     document.documentElement.addEventListener(
       'focus', e => {
@@ -141,5 +144,15 @@ export default {
   show () {
     this.visible = true
     this.focus.style.opacity = 1
+  },
+  setFocus(element) {
+    const customFocus = new CustomEvent(
+      "customFocus", 
+      {
+        bubbles: true,
+        cancelable: true
+      }
+    )
+    element.dispatchEvent(customFocus)
   }
 }
