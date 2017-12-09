@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "webpack --watch",
     "build": "webpack",
-    "js:fix": "standard --fix",
-    "test": "standard"
+    "js:fix": "standard --fix src",
+    "test": "standard src"
   },
   "keywords": [
     "animated",
