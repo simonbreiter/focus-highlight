@@ -145,9 +145,9 @@ export default {
     this.visible = true
     this.focus.style.opacity = 1
   },
-  setFocus(element) {
+  setFocus (element) {
     const customFocus = new CustomEvent(
-      "customFocus", 
+      'customFocus',
       {
         bubbles: true,
         cancelable: true
