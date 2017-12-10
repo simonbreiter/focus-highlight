@@ -8,7 +8,7 @@
     "build": "webpack",
     "js:fix": "standard --fix src/*",
     "test": "standard src/*",
-    "precommit": "npm run js:fix && npm run test"
+    "precommit": "npm run test"
   },
   "keywords": [
     "animated",
@@ -30,14 +30,14 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.0",
+    "babel-preset-env": "^1.6.1",
     "eslint-config-standard": "^10.2.1",
     "eslint-config-standard-jsx": "^4.0.2",
-    "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-react": "^7.4.0",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-react": "^7.5.1",
     "eslint-plugin-standard": "^3.0.1",
     "husky": "^0.14.3",
     "standard": "^10.0.3",
-    "webpack": "^3.7.1"
+    "webpack": "^3.10.0"
   }
 }
