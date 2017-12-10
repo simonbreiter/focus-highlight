@@ -28,18 +28,18 @@ export default {
     borderRadius: 4,
     borderThickness: 2,
     boxShadow: '0 0 5px 1px dodgerBlue',
-    transitionDuration: 0.3,
-    transitionTimingFunction: 'ease-in-out',
+    transition: 'all .3s ease',
     color: 'dodgerBlue',
     customStyle: false,
+    hideOnTransitionEnd: false,
     zIndex: 9999
   },
   focus: {},
   mouseDown: false,
   visible: false,
+  firstFocus: true,
   init (settings) {
     this.settings = Object.assign(this.settings, settings)
-    this.focus = this.createFocus()
     this.addListeners()
   },
   createFocus () {
@@ -64,15 +64,7 @@ export default {
         border: ${this.settings.borderThickness}px solid ${this.settings.color};
         box-shadow: ${this.settings.boxShadow};
         box-sizing: border-box;
-        top: 0;
-        left: 0;
-        transition-timing-function: ${this.settings.transitionTimingFunction};
-        transition: width ${this.settings.transitionDuration}s, 
-                    height ${this.settings.transitionDuration}s, 
-                    left ${this.settings.transitionDuration}s, 
-                    top ${this.settings.transitionDuration}s, 
-                    opacity ${this.settings.transitionDuration}s, 
-                    border-radius .2s;
+        transition: ${this.settings.transition};
         z-index: ${this.settings.zIndex};            
       }
     `
@@ -114,6 +106,14 @@ export default {
       },
       true
     )
+    if(this.settings.hideOnTransitionEnd) {
+      const transitions = ['webkitTransitionEnd', 'transitionend']
+      transitions.forEach(transition => {
+        transition.addEventListener(transition, e => {
+          this.hide()
+        })
+      })
+    }
     window.addEventListener('resize', throttle(this.hide.bind(this), 500))
   },
   move (e) {
@@ -121,19 +121,30 @@ export default {
     const rect = target.getBoundingClientRect()
     const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
 
+    if(this.firstFocus) {
+      this.focus = this.createFocus()
+    }
+
+    if(!this.firstFocus || !this.settings.hideOnTransitionEnd) {
+      this.show()
+    }
+
+    this.firstFocus =  false
+
     if (target.type === 'radio') {
       this.focus.style.borderRadius = '50%'
     } else {
       this.focus.style.borderRadius = `${this.settings.borderRadius}px`
     }
 
-    target.style.outline = 'none'
+    if(!this.settings.hideOnTransitionEnd) {
+      target.style.outline = 'none'
+    }
+
     this.focus.style.width = `${rect.width + this.settings.padding}px`
     this.focus.style.height = `${rect.height + this.settings.padding}px`
     this.focus.style.left = `${rect.left - this.settings.padding / 2}px`
     this.focus.style.top = `${rect.top + scrollTop - this.settings.padding / 2}px`
-
-    this.show()
   },
   hide () {
     if (this.visible) {
