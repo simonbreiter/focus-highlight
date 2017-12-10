@@ -38,13 +38,15 @@ FocusHighlight.setFocus(yourElement)
 Focus Highlight comes with default settings which can be changed:
 ```javascript
 FocusHighlight.init({
+  padding: 2,
   borderRadius: 4,
   borderThickness: 2,
-  padding: 0,
-  color: "blueViolet",
-  transitionDuration: 0.3,
-  transitionTimingFunction: 'ease-in-out',
-  customStyle: false // Set to true if you want to roll with your own CSS
+  boxShadow: '0 0 5px 1px dodgerBlue',
+  transition: 'all .3s ease',
+  color: 'dodgerBlue',
+  customStyle: false, // Set to true if you want to roll with your own CSS
+  hideOnTransitionEnd: false, // Hides focus after transition ended
+  zIndex: 9999
 })
 ```
 
