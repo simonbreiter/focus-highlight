@@ -106,7 +106,7 @@ export default {
       },
       true
     )
-    if(this.settings.hideOnTransitionEnd) {
+    if (this.settings.hideOnTransitionEnd) {
       const transitions = ['webkitTransitionEnd', 'transitionend']
       transitions.forEach(transition => {
         transition.addEventListener(transition, e => {
@@ -121,15 +121,15 @@ export default {
     const rect = target.getBoundingClientRect()
     const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
 
-    if(this.firstFocus) {
+    if (this.firstFocus) {
       this.focus = this.createFocus()
     }
 
-    if(!this.firstFocus || !this.settings.hideOnTransitionEnd) {
+    if (!this.firstFocus || !this.settings.hideOnTransitionEnd) {
       this.show()
     }
 
-    this.firstFocus =  false
+    this.firstFocus = false
 
     if (target.type === 'radio') {
       this.focus.style.borderRadius = '50%'
@@ -137,7 +137,7 @@ export default {
       this.focus.style.borderRadius = `${this.settings.borderRadius}px`
     }
 
-    if(!this.settings.hideOnTransitionEnd) {
+    if (!this.settings.hideOnTransitionEnd) {
       target.style.outline = 'none'
     }
 
@@ -157,13 +157,7 @@ export default {
     this.focus.style.opacity = 1
   },
   setFocus (element) {
-    const customFocus = new CustomEvent(
-      'customFocus',
-      {
-        bubbles: true,
-        cancelable: true
-      }
-    )
+    const customFocus = new window.Event('customFocus')
     element.dispatchEvent(customFocus)
   }
 }
