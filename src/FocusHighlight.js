@@ -36,6 +36,7 @@ export default {
   },
   focus: {},
   mouseDown: false,
+  labelHasFocus: false,
   visible: false,
   firstFocus: true,
   init (settings) {
@@ -83,6 +84,10 @@ export default {
   },
   addListeners () {
     document.documentElement.addEventListener('mousedown', e => {
+      const nodeName = e.target.nodeName.toLowerCase()
+      if (nodeName === 'label') {
+        this.labelHasFocus = true
+      }
       this.mouseDown = true
       this.hide()
     })
@@ -94,9 +99,10 @@ export default {
     })
     document.documentElement.addEventListener(
       'focus', e => {
-        if (!this.mouseDown && e.target !== document.body) {
+        if (!this.mouseDown && e.target !== document.body && !this.labelHasFocus) {
           this.move(e)
         }
+        this.labelHasFocus = false
       },
       true
     )
@@ -157,7 +163,13 @@ export default {
     this.focus.style.opacity = 1
   },
   setFocus (element) {
-    const customFocus = new window.Event('customFocus')
+    const customFocus = new window.Event(
+      'customFocus',
+      {
+        bubbles: true,
+        cancelable: true
+      }
+    )
     element.dispatchEvent(customFocus)
   }
 }

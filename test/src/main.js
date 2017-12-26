@@ -2,11 +2,11 @@ import FocusHighlight from '../../lib/FocusHighlight'
 
 FocusHighlight.init({
   borderRadius: 4,
-  padding: 2,
+  padding: 10,
   transition: 'all .2s ease',
-  boxShadow: 'none',
-  borderThickness: 3,
-  color: '#c0dffe',
+  boxShadow: '0px 0px 1px 1px #4169E1',
+  borderThickness: 2,
+  color: '#4169E1',
   hideOnTransitionEnd: false
 })
 
